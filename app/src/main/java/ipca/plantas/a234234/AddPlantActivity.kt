@@ -22,7 +22,7 @@ class AddPlantActivity : AppCompatActivity() {
             intent.putExtra("plant_name", editTextName.text.toString())
             intent.putExtra("plant_latin_name", editTextLatinName.text.toString())
             intent.putExtra("plant_description", editTextDescription.text.toString())
-            setResult(RESULT_OK)
+            setResult(RESULT_OK, intent)
             finish()
         }
 
