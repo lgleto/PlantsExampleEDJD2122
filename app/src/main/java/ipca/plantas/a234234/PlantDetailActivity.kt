@@ -9,8 +9,8 @@ import android.widget.TextView
 
 class PlantDetailActivity : AppCompatActivity() {
 
-    var name : String? = null
-    var description : String? = null
+    lateinit var name : String
+    lateinit var description : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,6 +19,7 @@ class PlantDetailActivity : AppCompatActivity() {
         name = intent.getStringExtra("plant_name")?:""
         val nameLatin   : String = intent.getStringExtra("plant_latin_name")?:""
         description = intent.getStringExtra("plant_description")?:""
+        val anInt = intent.getIntExtra("an_int",0)
 
         val textViewName           = findViewById<TextView>(R.id.textViewName)
         val textViewPlantLatinName = findViewById<TextView>(R.id.textViewLatinName)
